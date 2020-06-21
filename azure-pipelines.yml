@@ -7,6 +7,18 @@
     action: 'Create Or Update Resource Group'
     resourceGroupName: 'kcl-dev-rg'
     location: 'UK South'
+    templateLocation: 'URL of the file'
+    csmFileLink: 'https://github.com/Azure/azure-quickstart-templates/blob/master/101-vm-simple-windows/azuredeploy.json'
+    csmParametersFileLink: 'https://github.com/Azure/azure-quickstart-templates/blob/master/101-vm-simple-windows/azuredeploy.parameters.json'
+    deploymentMode: 'Incremental'
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'Free Trial (aa1816d8-6313-48e0-a4b9-b9a1eb6ef390)'
+    subscriptionId: 'aa1816d8-6313-48e0-a4b9-b9a1eb6ef390'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'kcl-dev-rg'
+    location: 'UK South'
     templateLocation: 'Linked artifact'
     deploymentMode: 'Incremental'
 # Start with a minimal pipeline that you can customize to build and deploy your code.
